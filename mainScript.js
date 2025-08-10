@@ -1,5 +1,6 @@
 const searchBarFormSelector = ".searchBarBackground"
 const searchInputSelector = "searchBar"
+const toggleButtonSelector = ".toggleButton"
 
 document.addEventListener('DOMContentLoaded', function() {
   const form = document.querySelector(searchBarFormSelector);
@@ -7,11 +8,32 @@ document.addEventListener('DOMContentLoaded', function() {
     form.addEventListener('submit', function(event) {
       event.preventDefault();
       const formData = new FormData(form);
-      Search(formData.get(searchInputSelector));
+      const activeToggleButton = document.querySelector('.toggleButton.active')
+      Search(formData.get(searchInputSelector), activeToggleButton.textContent.trim());
     });
   }
 });
 
-function Search(query) {
-  window.open("https://www.google.com/search?q="+query, "_self")
+// Deals with toggleable buttons that can only be selected one at a time.
+document.addEventListener('DOMContentLoaded', function() {
+  const buttons = document.querySelectorAll(toggleButtonSelector);
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      buttons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    });
+  });
+});
+
+
+function Search(query, engine) {
+  let url = "https://www.google.com/search?q="
+  const urls = {
+    'Google' : "https://www.google.com/search?q=",
+    'SearXNG' : "https://searxng.site/search?q=",
+    'Bing' : "https://www.bing.com/search?q=",
+    'Perplexity' : "https://www.perplexity.ai/search?q="
+  }
+  url = urls[engine] + query
+  window.open(url, "_self")
 }

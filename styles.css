@@ -36,6 +36,7 @@
   --bookmarks-radius: 2em;
 
   --link-font-size: 20px;
+  --link-color: #98971a;
 
 }
 
@@ -166,6 +167,6 @@ body {
 
 /* Links */
 a {
-  color: var(--glow-color);
+  color: var(--link-color);
   font-size: var(--link-font-size);
 }

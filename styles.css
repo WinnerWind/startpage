@@ -1,0 +1,59 @@
+:root {
+  --bg-color: #0d0d14;
+  --text-color: #ebdbb2;
+
+  --button-bg: #0d0d14;
+  --button-border: #ebdbb2;
+  --button-bg-hover: #ac3232;
+
+  --search-bg: #0d0d14;
+  --search-border: #ebdbb2;
+  --search-border-thickness: 2px;
+  --search-border-radius: 3em;
+  --search-font-size: 25px;
+
+  --main-padding: 10px;
+  --searchbar-padding: 2px;
+
+  --transition-fast: 0.25s ease;
+
+}
+
+body {
+  background: var(--bg-color);
+  min-height: 100vh;
+  color: var(--text-color);
+  padding: 70px 0;
+  margin: 10px;
+  text-align: center;
+}
+
+.searchBarBackground {
+  background-color: var(--search-bg);
+  border: var(--search-border-thickness) solid var(--search-border);
+  border-radius: var(--search-border-radius);
+  padding: var(--searchbar-padding);
+  width: 90%;
+  margin: 0 auto;       /* Centers the form horizontally */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+
+.searchBar {
+  background-color: transparent;
+  color: var(--text-color);
+  width: 98%;
+  outline: none;
+  border: none;
+  font-size: var(--search-font-size);
+  margin-bottom: 10px;
+}
+
+.searchBarBackground > div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 0.6em;
+}

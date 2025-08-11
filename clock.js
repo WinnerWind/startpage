@@ -12,9 +12,6 @@ async function SetTime() {
 	const milliseconds = String(date.getMilliseconds()).padStart(3, '0')
 	const outputDate = `${hour}:${minutes}:${seconds}::${milliseconds}`
 	clock.innerText = outputDate
-	ScheduleTimeSet()
-}
 
-async function ScheduleTimeSet() {
 	setTimeout(SetTime, 25)
 }

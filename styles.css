@@ -16,8 +16,7 @@
   --button-font-size: 25px;
   --button-border-thickness: 1px;
 
-  --search-bg: 13, 13, 20;
-  --search-bg-opacity: 0.6;
+  --search-bg: #0d0d143c;
   --search-blur-radius: 100px;
   --search-border: #ebdbb2;
   --search-border-thickness: 2px;
@@ -36,6 +35,9 @@
 
 }
 
+@font-face {
+  font-family: "Departure Mono";
+  src: url("fonts/departure-mono.woff2")
 }
 
 body {
@@ -46,6 +48,7 @@ body {
   margin: 0 auto;
   text-align: left;
   width: 90%;
+  font-family: "Departure Mono"
 }
 
 .clock {
@@ -69,6 +72,8 @@ body {
 }
 
 .searchBarBackground {
+/*   background-color: rgba(var(--search-bg), var(--search-bg-opacity)); */
+  background-color: var(--search-bg);
   border: var(--search-border-thickness) solid var(--search-border);
   border-radius: var(--search-border-radius);
   padding: var(--searchbar-padding);

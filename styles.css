@@ -30,6 +30,12 @@
   --transition-fast: 0.25s ease;
   --cursor-speed: 0.1s ease-out;
 
+  --bookmarks-page-bg: #e632325a;
+  --bookmarks-padding: 15px;
+  --bookmarks-radius: 2em;
+
+}
+
 }
 
 body {
@@ -63,7 +69,6 @@ body {
 }
 
 .searchBarBackground {
-  background-color: rgba(var(--search-bg), var(--search-bg-opacity));
   border: var(--search-border-thickness) solid var(--search-border);
   border-radius: var(--search-border-radius);
   padding: var(--searchbar-padding);
@@ -109,4 +114,41 @@ body {
   background: var(--button-bg-toggled);
   color: var(--button-text-color-toggled);
   border: var(--button-border-thickness) solid var(--button-border-color-toggled);
+}
+
+.bookmarksContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 1em 0;
+  gap: 10px;
+}
+
+.bookmarksPage {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  padding: var(--bookmarks-padding);
+  box-sizing: border-box;
+  background-color: var(--bookmarks-page-bg);
+  border-radius: var(--bookmarks-radius);
+}
+
+.bookmarksPage > h1 {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.bookmarksPage > ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.bookmarksPage > ul > li {
+  width: auto;
+  margin-bottom: 0.5em;     /* Optional: space between links */
 }

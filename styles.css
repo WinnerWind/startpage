@@ -2,6 +2,7 @@
   --bg-color: #0d0d14;
   --text-color: #ebdbb2;
 
+  --clock-size: 64px;
   --button-bg: #0d0d14;
   --button-bg-toggled: #ac3232;
   --button-border-color: #ebdbb2;
@@ -33,6 +34,9 @@ body {
   padding: 70px 0;
   margin: 10px;
   text-align: center;
+.clock {
+  margin-left: 30px;
+  font-size: var(--clock-size);
 }
 
 .searchBarBackground {

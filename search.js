@@ -2,7 +2,9 @@ const searchBarFormSelector = ".searchBarBackground"
 const searchInputSelector = "searchBar"
 const toggleButtonSelector = ".toggleButton"
 const toggleButtonActiveSelector = ".toggleButton.active"
+const engineContainerSelector = ".engineButtons"
 
+// Deal with form data
 document.addEventListener('DOMContentLoaded', function() {
   const form = document.querySelector(searchBarFormSelector);
   if (form) {
@@ -15,8 +17,37 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 
-// Deals with toggleable buttons that can only be selected one at a time.
-document.addEventListener('DOMContentLoaded', function() {
+let urls = {}
+
+async function GetURLs() {
+  try {
+      const response = await fetch("data/engines.json");
+      if (!response.ok) {
+          throw new Error("HTTP error " + response.status);
+      }
+      urls = await response.json();
+  } catch (error) {
+    console.error('Error fetching JSON:', error);
+  }
+}
+
+// Add all the engine buttons
+// Deal with toggle functionality
+document.addEventListener('DOMContentLoaded', async function() {
+  await GetURLs()
+  urlNames = Object.keys(urls)
+  const engineContainer = document.querySelector(engineContainerSelector)
+
+  urlNames.forEach((name) => {
+    let newButton = document.createElement("button")
+    newButton.classList.add("toggleButton")
+    newButton.type = "button"
+    newButton.textContent = name
+
+    engineContainer.appendChild(newButton)
+  })
+
+  // Deal with toggle functionality
   const buttons = document.querySelectorAll(toggleButtonSelector);
   buttons.forEach(btn => {
     btn.addEventListener('click', () => {
@@ -34,14 +65,7 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
-
 function Search(query, engine) {
-  const urls = {
-    'Google' : "https://www.google.com/search?q=",
-    'SearXNG' : "https://searxng.site/search?q=",
-    'Bing' : "https://www.bing.com/search?q=",
-    'Perplexity' : "https://www.perplexity.ai/search?q="
-  }
   let url = urls[engine] + query
   window.open(url, "_self")
 }

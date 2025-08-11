@@ -1,24 +1,24 @@
 :root {
-  --bg-color: #0d0d14;
+  --bg-color: #282828;
   --text-color: #ebdbb2;
-  --glow-color: #ac3232;
+  --glow-color: #98971a;
 
   --clock-size: 64px;
 
-  --button-bg: #0d0d14;
-  --button-bg-toggled: #ac3232;
-  --button-border-color: #ebdbb2;
-  --button-border-color-toggled: #ac3232;
-  --button-bg-hover: #ac3232;
+  --button-bg: #3c3836;
+  --button-bg-toggled: #7c6f64;
+  --button-border-color: #98971a;
+  --button-border-color-toggled: #b8bb26;
+  --button-bg-hover: #504945;
   --button-text-color: #ebdbb2;
-  --button-text-color-toggled: #0d0d14;
+  --button-text-color-toggled: #ebdbb2;
   --button-radius: 0.2em;
   --button-font-size: 25px;
-  --button-border-thickness: 1px;
+  --button-border-thickness: 0px;
 
-  --search-bg: #0d0d143c;
+  --search-bg: #2828283c;
   --search-blur-radius: 100px;
-  --search-border: #ebdbb2;
+  --search-border: #ebdbb2aa;
   --search-border-thickness: 2px;
   --search-border-radius: 3em;
   --search-font-size: 25px;
@@ -29,9 +29,11 @@
   --transition-fast: 0.25s ease;
   --cursor-speed: 0.1s ease-out;
 
-  --bookmarks-page-bg: #e632325a;
+  --bookmarks-page-bg: #2828285a;
   --bookmarks-padding: 15px;
   --bookmarks-radius: 2em;
+
+  --link-font-size: 20px;
 
 }
 
@@ -71,8 +73,8 @@ body {
     transition: transform var(--cursor-speed);
 }
 
+/* Search Bar */
 .searchBarBackground {
-/*   background-color: rgba(var(--search-bg), var(--search-bg-opacity)); */
   background-color: var(--search-bg);
   border: var(--search-border-thickness) solid var(--search-border);
   border-radius: var(--search-border-radius);
@@ -105,6 +107,7 @@ body {
   gap: 0.6em;
 }
 
+/* Toggle Button */
 .toggleButton {
   background: var(--button-bg);
   color: var(--button-text-color);
@@ -121,6 +124,7 @@ body {
   border: var(--button-border-thickness) solid var(--button-border-color-toggled);
 }
 
+/* Bookmarks  */
 .bookmarksContainer {
   display: flex;
   flex-wrap: wrap;
@@ -156,4 +160,10 @@ body {
 .bookmarksPage > ul > li {
   width: auto;
   margin-bottom: 0.5em;     /* Optional: space between links */
+}
+
+/* Links */
+a {
+  color: var(--glow-color);
+  font-size: var(--link-font-size);
 }

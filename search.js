@@ -1,5 +1,6 @@
 const searchBarFormSelector = ".searchBarBackground"
 const searchInputSelector = "searchBar"
+const searchInputSelectorClass = ".searchBar"
 const toggleButtonSelector = ".toggleButton"
 const toggleButtonActiveSelector = ".toggleButton.active"
 const engineContainerSelector = ".engineButtons"
@@ -66,6 +67,23 @@ document.addEventListener('DOMContentLoaded', async function() {
         }
     });
   });
+});
+
+// Change the placeholder text
+document.addEventListener('DOMContentLoaded', async function() {
+  let searchInput = document.querySelector(searchInputSelectorClass)
+  let quotes = []
+  try {
+      const response = await fetch("data/quotes.json");
+      if (!response.ok) {
+          throw new Error("HTTP error " + response.status);
+      }
+      quotes = await response.json();
+  } catch (error) {
+    console.error('Error fetching JSON:', error);
+  }
+  const randomIndex = Math.floor(Math.random() * quotes.length);
+  searchInput.placeholder = quotes[randomIndex]
 });
 
 function Search(query, engine) {

@@ -1,6 +1,7 @@
 const searchBarFormSelector = ".searchBarBackground"
 const searchInputSelector = "searchBar"
 const toggleButtonSelector = ".toggleButton"
+const toggleButtonActiveSelector = ".toggleButton.active"
 
 document.addEventListener('DOMContentLoaded', function() {
   const form = document.querySelector(searchBarFormSelector);
@@ -8,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
     form.addEventListener('submit', function(event) {
       event.preventDefault();
       const formData = new FormData(form);
-      const activeToggleButton = document.querySelector('.toggleButton.active')
+      const activeToggleButton = document.querySelector(toggleButtonActiveSelector)
       Search(formData.get(searchInputSelector), activeToggleButton.textContent.trim());
     });
   }
@@ -21,6 +22,14 @@ document.addEventListener('DOMContentLoaded', function() {
     btn.addEventListener('click', () => {
       buttons.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
+        // Search if a query is given and a button is pressed.
+        const searchForm = document.querySelector(searchBarFormSelector)
+        const formData = new FormData(searchForm)
+        let activeToggleButton = document.querySelector(toggleButtonActiveSelector)
+
+        if (formData.get(searchInputSelector) && activeToggleButton) {
+          Search(formData.get(searchInputSelector), activeToggleButton.textContent.trim())
+        }
     });
   });
 });

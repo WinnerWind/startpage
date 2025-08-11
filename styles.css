@@ -3,6 +3,7 @@
   --text-color: #ebdbb2;
 
   --clock-size: 64px;
+
   --button-bg: #0d0d14;
   --button-bg-toggled: #ac3232;
   --button-border-color: #ebdbb2;
@@ -32,8 +33,11 @@ body {
   min-height: 100vh;
   color: var(--text-color);
   padding: 70px 0;
-  margin: 10px;
-  text-align: center;
+  margin: 0 auto;
+  text-align: left;
+  width: 90%;
+}
+
 .clock {
   margin-left: 30px;
   font-size: var(--clock-size);
@@ -44,7 +48,7 @@ body {
   border: var(--search-border-thickness) solid var(--search-border);
   border-radius: var(--search-border-radius);
   padding: var(--searchbar-padding);
-  width: 90%;
+  width: 100%;
   margin: 0 auto;       /* Centers the form horizontally */
   display: flex;
   flex-direction: column;

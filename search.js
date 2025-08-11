@@ -38,9 +38,12 @@ document.addEventListener('DOMContentLoaded', async function() {
   urlNames = Object.keys(urls)
   const engineContainer = document.querySelector(engineContainerSelector)
 
-  urlNames.forEach((name) => {
+  urlNames.forEach((name, idx) => {
     let newButton = document.createElement("button")
     newButton.classList.add("toggleButton")
+    if (idx === 0) {
+      newButton.classList.add("active")
+    }
     newButton.type = "button"
     newButton.textContent = name
 

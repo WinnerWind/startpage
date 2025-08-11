@@ -36,13 +36,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 function Search(query, engine) {
-  let url = "https://www.google.com/search?q="
   const urls = {
     'Google' : "https://www.google.com/search?q=",
     'SearXNG' : "https://searxng.site/search?q=",
     'Bing' : "https://www.bing.com/search?q=",
     'Perplexity' : "https://www.perplexity.ai/search?q="
   }
-  url = urls[engine] + query
+  let url = urls[engine] + query
   window.open(url, "_self")
 }

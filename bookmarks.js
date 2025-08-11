@@ -1,26 +1,19 @@
-const bookmarks = [
-	{
-		"Title": "Search",
-		"Google":"https://google.com",
-	},
-	{
-		"Title": "Social Media",
-		"Reddit": "N/A",
-	},
-	{
-		"Title": "Social Media",
-		"Reddit": "N/A",
-	},
-	{
-		"Title": "Social Media",
-		"Reddit": "N/A",
-	}
-]
 const bookmarksContainer = ".bookmarksContainer"
 
 LoadBookmarks()
 
-function LoadBookmarks() {
+async function LoadBookmarks() {
+	let bookmarks = []
+	try {
+		const response = await fetch("data/bookmarks.json");
+	    if (!response.ok) {
+			throw new Error("HTTP error " + response.status);
+	    }
+	    bookmarks = await response.json();
+	} catch (error) {
+	  console.error('Error fetching JSON:', error);
+	}
+
 	bookmarks.forEach((dictionary) => {
 		const newPage = document.createElement("div");
 		newPage.classList.add("bookmarksPage");

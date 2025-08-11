@@ -6,6 +6,7 @@
   --glow-size: clamp(200px, 30vw, 400px);
 
   --clock-size: 64px;
+  --clock-subtitle-size: 40px;
 
   --button-bg: #3c3836;
   --button-bg-toggled: #7c6f64;
@@ -59,6 +60,12 @@ body {
 .clock {
   margin-left: 30px;
   font-size: var(--clock-size);
+  display:block;
+}
+.clockSubtitle {
+  margin-left: 30px;
+  font-size: var(--clock-subtitle-size);
+  display: block;
 }
 
 

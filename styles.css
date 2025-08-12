@@ -119,7 +119,7 @@ body {
 .searchBar {
   background-color: transparent;
   color: var(--text-color);
-  width: 98%;
+  width: 95%;
   outline: none;
   border: none;
   font-size: var(--search-font-size);

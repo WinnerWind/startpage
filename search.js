@@ -18,33 +18,24 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 
-// let urls = {}
-//
-// async function GetURLs() {
-//   try {
-//       const response = await fetch("data/engines.json");
-//       if (!response.ok) {
-//           throw new Error("HTTP error " + response.status);
-//       }
-//       urls = await response.json();
-//   } catch (error) {
-//     console.error('Error fetching JSON:', error);
-//   }
-// }
-let urls = {
-    "Google" : "https://www.google.com/search?q=",
-    "Wikipedia" : "https://en.wikipedia.org/wiki/Special:Search?search=",
-    "SearXNG" : "https://searxng.site/search?q=",
-    "辞書" : "https://jisho.org/search/",
-    "Perplexity" : "https://www.perplexity.ai/search?q="
+let urls = {}
+
+async function GetURLs() {
+  try {
+      const response = await fetch("data/engines.json");
+      if (!response.ok) {
+          throw new Error("HTTP error " + response.status);
+      }
+      urls = await response.json();
+  } catch (error) {
+    console.error('Error fetching JSON:', error);
+  }
 }
-
-
 
 // Add all the engine buttons
 // Deal with toggle functionality
 document.addEventListener('DOMContentLoaded', async function() {
-  // await GetURLs()
+  await GetURLs()
   urlNames = Object.keys(urls)
   const engineContainer = document.querySelector(engineContainerSelector)
 
@@ -81,28 +72,16 @@ document.addEventListener('DOMContentLoaded', async function() {
 // Change the placeholder text
 document.addEventListener('DOMContentLoaded', async function() {
   let searchInput = document.querySelector(searchInputSelectorClass)
-  // let quotes = []
-  // try {
-  //     const response = await fetch("data/quotes.json");
-  //     if (!response.ok) {
-  //         throw new Error("HTTP error " + response.status);
-  //     }
-  //     quotes = await response.json();
-  // } catch (error) {
-  //   console.error('Error fetching JSON:', error);
-  // }
-  let quotes = [
-	"Change the world or die trying",
-	"Hmmm, what shall we search today?",
-	"Have a good day!",
-	"Syntax Error!",
-	"I'm feeling unlucky",
-	"amogus",
-	"Beep Boop.",
-	"0 results in 0 seconds.",
-	"heck yeah!",
-	"The internet is a limitless directory..."
-  ]
+  let quotes = []
+  try {
+      const response = await fetch("data/quotes.json");
+      if (!response.ok) {
+          throw new Error("HTTP error " + response.status);
+      }
+      quotes = await response.json();
+  } catch (error) {
+    console.error('Error fetching JSON:', error);
+  }
   const randomIndex = Math.floor(Math.random() * quotes.length);
   searchInput.placeholder = quotes[randomIndex]
 });

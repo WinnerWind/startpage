@@ -2,8 +2,11 @@
   --bg-color: #282828;
   --text-color: #ebdbb2;
 
-  --glow-color: #98971aaa;
+  --glow-color: #98971a;
+  --glow-color-hover: #fabd2f;
   --glow-size: clamp(200px, 30vw, 400px);
+  --glow-opacity: 0.6;
+  --glow-opacity-hovered: 0.8;
 
   --clock-size: 64px;
   --clock-subtitle-size: 40px;
@@ -31,7 +34,7 @@
   --searchbar-padding: 2px;
 
   --transition-fast: 0.25s ease;
-  --cursor-speed: 0.1s ease-out;
+  --cursor-speed: 0.15s ease-out;
 
   --bookmarks-page-bg: #2828285a;
   --bookmarks-padding: 15px;
@@ -86,8 +89,14 @@ body {
     height: var(--glow-size);
     background-image: radial-gradient(circle, var(--glow-color) 0%, rgba(1, 58, 251, 0) 60%);
     filter: blur(100px);
-    opacity: 0.8;
-    transition: transform var(--cursor-speed);
+    opacity: var(--glow-opacity);
+    transition:
+      transform var(--cursor-speed),
+      opacity var(--transition-fast);
+}
+
+.cursorGlow.elementHover {
+  opacity: var(--glow-opacity-hovered);
 }
 
 /* Search Bar */

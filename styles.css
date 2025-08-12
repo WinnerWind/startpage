@@ -39,6 +39,7 @@
 
   --link-font-size: 20px;
   --link-color: #98971a;
+  --link-hover-color: #fabd2f;
 
 }
 
@@ -183,4 +184,19 @@ body {
 a {
   color: var(--link-color);
   font-size: var(--link-font-size);
+}
+
+a:link {
+  text-decoration: none;
+  color: var(--link-color);
+  transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+a:visited {
+  color: var(--link-color); /* Changed to use the same color as a:link */
+}
+
+a:hover {
+  color: var(--link-hover-color);
+  text-shadow: 0 0 5px var(--link-hover-color); /* Subtle glow on hover */
 }

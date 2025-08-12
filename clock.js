@@ -2,6 +2,8 @@ const clock = document.querySelector(".clock")
 const subClock = document.querySelector(".clockSubtitle")
 const subClockSmall = document.querySelector(".clockSubtitleSmall")
 
+const timeout = 25
+
 SetTime()
 
 async function SetTime() {
@@ -24,7 +26,7 @@ async function SetTime() {
 
 	clock.innerText = `${hour}:${minutes}:${seconds}`
 	subClock.innerText = `${dayOfTheWeekName}, ${day} ${monthName} ${year}`
-	subClockSmall.innerText = `${daysToYearEnd} days before year ends.`
+	subClockSmall.innerText = `${daysToYearEnd} days before the year ends.`
 
-	setTimeout(SetTime, 25)
+	setTimeout(SetTime, timeout)
 }

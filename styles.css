@@ -142,7 +142,8 @@ body {
 
 /* Bookmarks  */
 .bookmarksContainer {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   flex-wrap: wrap;
   justify-content: center;
   padding: 1em 0;
@@ -152,7 +153,7 @@ body {
 .bookmarksPage {
   display: flex;
   flex-direction: column;
-  width: 30%;
+  width: 100%;
   padding: var(--bookmarks-padding);
   box-sizing: border-box;
   background-color: var(--bookmarks-page-bg);

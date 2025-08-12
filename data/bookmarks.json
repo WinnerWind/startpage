@@ -1,18 +1,21 @@
 [
 	{
-		"Title": "Search",
-		"Google":"https://google.com"
+		"Title": "Code",
+		"Github": "https://github.com",
+		"itch.io": "https://itch.io"
 	},
 	{
 		"Title": "Social Media",
-		"Reddit": "N/A"
+		"Reddit": "https://reddit.com",
+		"Instagram": "https://instagram.com",
+		"Twitter": "https://x.com"
 	},
 	{
-		"Title": "Social Media",
-		"Reddit": "N/A"
-	},
-	{
-		"Title": "Social Media",
-		"Reddit": "N/A"
+		"Title": "The High Seas",
+		"nyaa" : "https://nyaa.si",
+		"fmhy" : "https://fmhy.net",
+		"lucida.to" : "https://lucida.to",
+		"Anna's Archive": "https://annas-archive.org",
+		"squid.wtf" : "https://squid.wtf"
 	}
 ]

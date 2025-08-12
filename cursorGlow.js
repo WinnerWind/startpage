@@ -20,5 +20,5 @@ document.addEventListener('DOMContentLoaded', function() {
                 glow.classList.remove("elementHover")
             });
         })
-    }, 100)
+    }, 400)
 });

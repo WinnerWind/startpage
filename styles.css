@@ -2,6 +2,7 @@
   --bg-color: #28282899;
   --bg-image: url('img/rain-gruvbox.gif');
   --text-color: #ebdbb2;
+  --bg-blur-radius: 3px;
 
   --glow-color: #b8bb26;
   --glow-color-hover: #b8bb26;
@@ -66,6 +67,17 @@ body {
   text-align: left;
   width: 100%;
   font-family: "Departure Mono"
+}
+
+.backgroundBlur {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: var(--bg-image) repeat center center fixed;
+  filter: blur(var(--bg-blur-radius));
+  z-index: -1;
+  pointer-events: none;
 }
 
 .htmlRoot {

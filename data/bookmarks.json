@@ -8,14 +8,22 @@
 		"Title": "Social Media",
 		"Reddit": "https://reddit.com",
 		"Instagram": "https://instagram.com",
-		"Twitter": "https://x.com"
+		"Twitter": "https://x.com",
+		"Discord" : "https://discord.com/app",
+		"Whatsapp" : "https://web.whatsapp.com"
 	},
 	{
 		"Title": "The High Seas",
-		"nyaa" : "https://nyaa.si",
 		"fmhy" : "https://fmhy.net",
+		"nyaa" : "https://nyaa.si",
 		"lucida.to" : "https://lucida.to",
 		"Anna's Archive": "https://annas-archive.org",
 		"squid.wtf" : "https://squid.wtf"
+	},
+	{
+		"Title" : "File Transfer",
+		"Wormhole App" : "https://wormhole.app/",
+		"Web Wormhole" : "https://webwormhole.com/",
+		"File Pizza" : "https://file.pizza/"
 	}
 ]

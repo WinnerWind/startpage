@@ -29,4 +29,4 @@ subClockSmall.innerText = `${daysToYearEnd} days before the year ends.`
 1. You can add or remove your own bookmarks by editing `data/bookmarks.json` as appropriate. Note that `bookmarks.json` stores an array of objects, where `"Title"` determines the title of the bookmark card, and all subsequent dictionary entries define both the name and the URL of the bookmark.
 
 ## Public Instance
-A public instance of this start page can be found at https://assets.winnerwind.in/startpage
+A public instance of this start page can be found at https://startpage.winnerwind.in

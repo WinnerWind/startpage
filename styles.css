@@ -46,6 +46,7 @@
   --link-color: #98971a;
   --link-hover-color: #fabd2f;
 
+  overscroll-behavior: none;
 }
 
 @font-face {

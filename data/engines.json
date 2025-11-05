@@ -1,8 +1,8 @@
 {
-    "Google" : "https://www.google.com/search?udm=14&q=",
-    "URL" : "https://",
-    "Wikipedia" : "https://en.wikipedia.org/wiki/Special:Search?search=",
-    "SearXNG" : "https://searxng.site/search?q=",
-    "辞書" : "https://jisho.org/search/",
-    "Perplexity" : "https://www.perplexity.ai/search?q="
+    "Google" : "https://www.google.com/search?udm=14&q=%s",
+    "URL" : "https://%s",
+    "Wikipedia" : "https://en.wikipedia.org/wiki/Special:Search?search=%s",
+    "SearXNG" : "https://searxng.site/search?q=%s",
+    "辞書" : "https://jisho.org/search/%s",
+    "Perplexity" : "https://www.perplexity.ai/search?q=%s"
 }

@@ -87,6 +87,6 @@ document.addEventListener('DOMContentLoaded', async function() {
 });
 
 function Search(query, engine) {
-  let url = urls[engine] + query
+  let url = urls[engine].replaceAll("%s",query)
   window.open(url, "_self")
 }

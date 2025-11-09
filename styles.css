@@ -50,14 +50,17 @@
 }
 
 @font-face {
-  font-family: "Departure Mono";
   src: url("fonts/departure-mono.woff2")
+  font-family: "Main Font";
 }
 
 html {
   background: var(--bg-image) repeat center center fixed;
 }
 
+* {
+	font-family: "Main Font"
+}
 
 body {
   background: var(--bg-color);

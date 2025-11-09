@@ -1,6 +1,7 @@
 :root {
   --bg-color: #28282822;
-  --bg-image: url('img/isolation-gruvbox.gif');
+  //--bg-image: url('img/isolation-gruvbox.gif');
+  --bg-image: none;
   --text-color: #ebdbb2;
   --bg-blur-radius: 1px;
 
@@ -56,6 +57,8 @@
 
 html {
   background: var(--bg-image) no-repeat center center fixed;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
   background-size: cover;
 }
 

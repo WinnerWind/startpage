@@ -50,8 +50,8 @@
 }
 
 @font-face {
-  src: url("fonts/departure-mono.woff2")
   font-family: "Main Font";
+  src: url("fonts/gohu.woff2")
 }
 
 html {

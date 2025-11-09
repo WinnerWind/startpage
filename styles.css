@@ -1,8 +1,8 @@
 :root {
-  --bg-color: #28282899;
-  --bg-image: url('img/rain-gruvbox.gif');
+  --bg-color: #28282822;
+  --bg-image: url('img/isolation-gruvbox.gif');
   --text-color: #ebdbb2;
-  --bg-blur-radius: 3px;
+  --bg-blur-radius: 1px;
 
   --glow-color: #b8bb26;
   --glow-color-hover: #b8bb26;
@@ -55,7 +55,8 @@
 }
 
 html {
-  background: var(--bg-image) repeat center center fixed;
+  background: var(--bg-image) no-repeat center center fixed;
+  background-size: cover;
 }
 
 * {
@@ -70,7 +71,6 @@ body {
   margin: 0 auto;
   text-align: left;
   width: 100%;
-  font-family: "Departure Mono"
 }
 
 .backgroundBlur {
@@ -79,6 +79,7 @@ body {
   width: 100vw;
   height: 100vh;
   background: var(--bg-image) repeat center center fixed;
+  background-size: cover;
   filter: blur(var(--bg-blur-radius));
   z-index: -1;
   pointer-events: none;

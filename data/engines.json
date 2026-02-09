@@ -1,8 +1,10 @@
 {
+    "Ecosia" : "https://www.ecosia.org/search?q=%s",
     "Google" : "https://www.google.com/search?udm=14&q=%s",
     "URL" : "https://%s",
     "Wikipedia" : "https://en.wikipedia.org/wiki/Special:Search?search=%s",
     "SearXNG" : "https://searxng.site/search?q=%s",
     "辞書" : "https://jisho.org/search/%s",
     "Perplexity" : "https://www.perplexity.ai/search?q=%s"
+
 }

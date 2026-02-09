@@ -1,9 +1,9 @@
 :root {
-  --bg-color: #28282822;
+  --bg-color: #282828aa;
   //--bg-image: url('img/isolation-gruvbox.gif');
   --bg-image: none;
   --text-color: #ebdbb2;
-  --bg-blur-radius: 1px;
+  --bg-blur-radius: 3px;
 
   --glow-color: #b8bb26;
   --glow-color-hover: #b8bb26;

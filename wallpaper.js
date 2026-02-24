@@ -1,4 +1,4 @@
-SetBackground()
+// SetBackground()
 const fallBackPath = "img/fallback.gif"
 
 async function SetBackground() {

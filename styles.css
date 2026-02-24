@@ -1,34 +1,34 @@
 :root {
-  --bg-color: #282828aa;
+  --bg-color: #000000ff;
   //--bg-image: url('img/isolation-gruvbox.gif');
   --bg-image: none;
-  --text-color: #ebdbb2;
-  --bg-blur-radius: 3px;
+  --text-color: #ffffff;
+  --bg-blur-radius: 0px;
 
-  --glow-color: #b8bb26;
-  --glow-color-hover: #b8bb26;
+  --glow-color: #00cccc;
+  --glow-color-hover: #00ffff;
   --glow-size: clamp(300px, 45vw, 700px);
   --glow-opacity: 0.4;
-  --glow-opacity-hovered: 0.9;
+  --glow-opacity-hovered: 0.7;
 
   --clock-size: 64px;
   --clock-subtitle-size: 40px;
   --clock-subtitle-small-size: 25px;
 
-  --button-bg: #3c3836;
-  --button-bg-toggled: #7c6f64;
-  --button-border-color: #98971a;
-  --button-border-color-toggled: #b8bb26;
-  --button-bg-hover: #504945;
-  --button-text-color: #ebdbb2;
-  --button-text-color-toggled: #ebdbb2;
+  --button-bg: #000000;
+  --button-bg-toggled: #000000;
+  --button-border-color: #aaaaaa;
+  --button-border-color-toggled: #00ffff;
+  --button-bg-hover: #777777;
+  --button-text-color: #ffffff;
+  --button-text-color-toggled: #00ffff;
   --button-radius: 0.2em;
   --button-font-size: 25px;
   --button-border-thickness: 0.2px;
 
-  --search-bg: #2828283c;
+  --search-bg: #000000aa;
   --search-blur-radius: 100px;
-  --search-border: #ebdbb2aa;
+  --search-border: #ff0000;
   --search-border-thickness: 2px;
   --search-border-radius: 3em;
   --search-font-size: 25px;
@@ -39,20 +39,20 @@
   --transition-fast: 0.25s ease;
   --cursor-speed: 0.15s ease-out;
 
-  --bookmarks-page-bg: #3c38365a;
+  --bookmarks-page-bg: #111111aa;
   --bookmarks-padding: 15px;
   --bookmarks-radius: 2em;
 
   --link-font-size: 20px;
-  --link-color: #98971a;
-  --link-hover-color: #fabd2f;
+  --link-color: #666666;
+  --link-hover-color: #00ffff;
 
   overscroll-behavior: none;
 }
 
 @font-face {
   font-family: "Main Font";
-  src: url("fonts/gohu.woff2")
+  src: url("fonts/profont.ttf")
 }
 
 html {
